@@ -1,0 +1,37 @@
+analyze_profile_task:
+  description: >
+    Analyze the learner profile: {learner_profile}.
+    The target career is {target_career}.
+    Identify strengths, weaknesses, and important career readiness issues.
+  expected_output: >
+    A structured summary of the learner profile, strengths, weaknesses,
+    and career readiness issues.
+  agent: career_profile_analyst
+
+analyze_gap_task:
+  description: >
+    Compare the learner's current self-assessment: {self_assessment}
+    with the required qualifications: {required_qualifications}.
+    Identify competency gaps and priority areas.
+  expected_output: >
+    A gap analysis table showing required qualifications, current level,
+    target level, gap level, and priority.
+  agent: qualification_gap_analyst
+
+create_development_plan_task:
+  description: >
+    Create an individual career development plan for {target_career}
+    based on the learner profile, competency gaps, and development priorities.
+  expected_output: >
+    A practical development plan with development goals, activities,
+    learning channels, timeline, evidence, and expected outcomes.
+  agent: development_plan_designer
+
+write_final_report_task:
+  description: >
+    Write a final report summarizing the career analysis, qualification gap analysis,
+    self-assessment suggestions, and individual development plan.
+  expected_output: >
+    A complete report with sections: learner profile, target career,
+    required qualifications, gap analysis, development plan, and recommendations.
+  agent: self_assessment_coach
