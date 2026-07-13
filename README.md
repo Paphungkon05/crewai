@@ -5,7 +5,6 @@
 
 ## โครงสร้างโปรเจกต์
 
-```
 career_plan_agents_classic/
 ├── .env                # ตั้งค่าเอง (ห้าม commit ไฟล์นี้)
 ├── .env.example        # ตัวอย่างการตั้งค่า
@@ -22,7 +21,6 @@ career_plan_agents_classic/
         └── config/
             ├── agents.yaml
             └── tasks.yaml
-```
 
 ## ติดตั้ง
 
@@ -38,19 +36,15 @@ uv sync
 
 1. ติดตั้งและรัน Ollama, ดาวน์โหลด model เช่น `ollama run llama3:latest`
 2. ตั้งค่าใน `.env`:
-   ```
-   MODEL=ollama/llama3
-   OLLAMA_BASE_URL=http://localhost:11434
-   ```
+MODEL=ollama/llama3
+OLLAMA_BASE_URL=http://localhost:11434
 
 ## ใช้กับ Google Gemini API
 
 1. สร้าง API key ที่ https://aistudio.google.com/
 2. ตั้งค่าใน `.env`:
-   ```
-   GOOGLE_API_KEY=your_gemini_api_key_here
-   MODEL=gemini/gemini-2.0-flash
-   ```
+GOOGLE_API_KEY=your_gemini_api_key_here
+MODEL=gemini/gemini-2.0-flash
 
 ## รันโปรเจกต์
 
