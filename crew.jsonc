@@ -1,0 +1,41 @@
+{
+  "name": "career_plan_agents",
+  // 1. เพิ่มรายชื่อไฟล์ของ Agent ทั้ง 4 ตัวที่เราสร้างไว้ในโฟลเดอร์ agents
+  "agents": [
+    "career_profile_analyst",
+    "qualification_gap_analyst",
+    "development_plan_designer",
+    "self_assessment_coach"
+  ],
+  // 2. ตั้งค่าการส่งต่อชิ้นงาน (Tasks) ให้สอดรับกันตามลำดับ
+  "tasks": [
+    {
+      "name": "analyze_profile_task",
+      "description": "Analyze the learner profile: {learner_profile}. The target career is {target_career}. Identify strengths, weaknesses, and important career readiness issues.",
+      "expected_output": "A structured summary of the learner profile, strengths, weaknesses, and career readiness issues.",
+      "agent": "career_profile_analyst"
+    },
+    {
+      "name": "identify_gaps_task",
+      "description": "Compare the learner's current competencies found in the profile analysis against the required qualifications of the target career {target_career} to clearly pinpoint skill gaps.",
+      "expected_output": "A structured list of competency gaps and areas of improvement.",
+      "agent": "qualification_gap_analyst"
+    },
+    {
+      "name": "design_plan_task",
+      "description": "Create a practical, step-by-step individual career development plan with recommended resources and a realistic timeline based on the identified gaps.",
+      "expected_output": "A personalized career development plan with roadmap, resources, and timeline.",
+      "agent": "development_plan_designer"
+    },
+    {
+      "name": "coaching_assessment_task",
+      "description": "Review the proposed development plan, provide reflection prompts, and suggest action steps for self-assessment based on evidence and performance levels.",
+      "expected_output": "A comprehensive coaching feedback report with self-assessment guidelines.",
+      "agent": "self_assessment_coach"
+    }
+  ],
+  "process": "sequential",
+  "verbose": true,
+  "memory": false,
+  "max_rpm": 1
+}
